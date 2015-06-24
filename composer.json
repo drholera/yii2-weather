@@ -1,8 +1,6 @@
 {
-    // package name
     "name": "yiisoft/yii2-drholera-weather",
 
-    // package type
     "type": "yii2-extension",
 
     "description": "The Imagine integration for the Yii framework",
@@ -20,13 +18,11 @@
         }
     ],
 
-    // package dependencies
     "require": {
         "yiisoft/yii2": "*",
         "dhweather/widget": "v0.0.1"
     },
 
-    // class autoloading specs
     "autoload": {
         "psr-4": {
             "yii\\dhweather\\": ""
