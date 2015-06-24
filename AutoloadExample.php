@@ -1,6 +1,6 @@
 <?php
 
-namespace yii\\drweather\;
+namespace drholera\dhweather;
 
 /**
  * This is just an example.

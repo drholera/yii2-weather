@@ -16,7 +16,13 @@
     },
     "autoload": {
         "psr-4": {
-            "yii\\drweather\\": ""
+            "drholera\\dhweather": ""
         }
-    }
+    },
+    "repositories":[
+        {
+            "type": "git",
+            "url": "https://path.to/your/repo"
+        }
+    ]
 }
