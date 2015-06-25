@@ -19,6 +19,11 @@
             "drholera\\Dhweather\\": ""
         }
     },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v0.0.1"
+        },
+    }
     "repositories":[
         {
             "type": "git",
