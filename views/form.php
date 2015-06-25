@@ -1,5 +1,5 @@
 <?php
-    use Dhweather;
+    use drholera\dhweather;
     use yii\widgets\ActiveForm;
     use yii\helpers\Html;
 ?>
