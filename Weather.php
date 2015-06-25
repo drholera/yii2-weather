@@ -1,6 +1,6 @@
 <?php
 
-namespace drholera\dhweather;
+namespace Dhweather;
 
 use GWLib;
 use GWLib\GoogleWeather;

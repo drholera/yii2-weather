@@ -1,11 +1,10 @@
 <?php
 
-namespace drholera\dhweather;
+namespace drholera\Dhweather;
 
-use Cmfcmf\OpenWeatherMap;
 use yii\helpers\Html;
 
-class Widget extends \yii\base\Widget
+class Widgets extends \yii\base\Widget
 {
     public $cityId;
 
@@ -17,7 +16,7 @@ class Widget extends \yii\base\Widget
 
     public function run()
     {
-        return $this->render('form');
+        return $this->render('form', ['instance' => new LoginForm()]);
     }
 
 }
