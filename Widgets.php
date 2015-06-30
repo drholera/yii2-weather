@@ -3,7 +3,7 @@
 namespace drholera\Dhweather;
 
 use yii\helpers\Html;
-use drholera\Dhweather\model\WeatherForm;
+use drholera\Dhweather\model\WeatherSettings;
 
 class Widgets extends \yii\base\Widget
 {
@@ -17,7 +17,7 @@ class Widgets extends \yii\base\Widget
 
     public function run()
     {
-        return $this->render('form', ['model' => new WeatherForm]);
+        return $this->render('form', ['model' => new WeatherSettings]);
     }
 
 }
