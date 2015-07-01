@@ -3,11 +3,10 @@
 namespace drholera\dhweather;
 
 use yii\helpers\Html;
-use drholera\dhweather\model\WeatherSettings;
+use drholera\Dhweather\model\WeatherSettings;
 
 class Widgets extends \yii\base\Widget
 {
-    public $cityId;
 
     public function init()
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace drholera\dhweather\model;
+namespace drholera\Dhweather\model;
 
 use Yii;
 
