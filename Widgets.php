@@ -1,9 +1,9 @@
 <?php
 
-namespace drholera\Dhweather;
+namespace drholera\dhweather;
 
 use yii\helpers\Html;
-use drholera\Dhweather\model\WeatherSettings;
+use drholera\dhweather\model\WeatherSettings;
 
 class Widgets extends \yii\base\Widget
 {

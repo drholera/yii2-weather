@@ -1,6 +1,6 @@
 <?php
 
-namespace drholera\Dhweather\model;
+namespace drholera\dhweather\model;
 
 use Yii;
 
@@ -27,7 +27,7 @@ class WeatherSettings extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['country', 'city'], 'required']
+            [['city'], 'required']
         ];
     }
 
@@ -38,7 +38,6 @@ class WeatherSettings extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'country' => 'Country',
             'city' => 'City',
         ];
     }

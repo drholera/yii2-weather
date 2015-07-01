@@ -2,8 +2,6 @@
 
 namespace Dhweather;
 
-use GWLib;
-use GWLib\GoogleWeather;
 
 class Weather
 {
@@ -11,17 +9,29 @@ class Weather
 
     public function __construct($string)
     {
+        var_dump(111);
         $this->city = $string;
     }
 
     /**
-     * Get weather array by city id
-     * @param $string
+     * Get weather array
      */
-    public function getCityWeather($string)
+    public function getCityWeather()
     {
-        $Weather = new GoogleWeather();
-        $Weather->location = $string;
+        $this->location = $_POST['city'];
+        $lang = 'en';
+        $units = 'metric';
+
+        $Weather = new OpenWeatherMap();
+        $currentWeather = $Weather->getWeather($this->location, $units, $lang);
+
+        $res = array(
+            'body'    => print_r($currentWeather, true),
+            'success' => true,
+        );
+
+        var_dump(111); die;
+
     }
 
 }
