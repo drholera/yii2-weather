@@ -12,16 +12,16 @@ $asset = drholera\Dhweather\assets\WeatherAssets::register($this);
 
     <?php $form = ActiveForm::begin(['id' => 'link_form']); ?>
 
-        <?= $form->field($model, 'city') ?>
-    
-        <div class="form-group">
-            <? echo Html::a('Click me', ['weather/get-weather'], [
-                'id' => 'ajax_button',
-                'data-on-done' => 'weatherFormDone',
-                'data-form-id' => 'link_form',
-                'class' => 'btn btn-primary'
-            ]); ?>
-        </div>
+    <?= $form->field($model, 'city') ?>
+
+    <div class="form-group">
+        <? echo Html::a('Click me', ['weather/get-weather'], [
+            'id' => 'ajax_button',
+            'data-on-done' => 'weatherFormDone',
+            'data-form-id' => 'link_form',
+            'class' => 'btn btn-primary'
+        ]); ?>
+    </div>
     <?php ActiveForm::end(); ?>
 
 </div><!-- form -->

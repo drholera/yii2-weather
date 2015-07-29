@@ -1,37 +1,24 @@
 <?php
 
-namespace Dhweather;
+namespace drholera\dhweather;
 
+use Cmfcmf\OpenWeatherMap;
+use drholera\Dhweather\model\WeatherSettings;
 
 class Weather
 {
-    public $city;
+    public function defaultWeather(){
 
-    public function __construct($string)
-    {
-        var_dump(111);
-        $this->city = $string;
-    }
-
-    /**
-     * Get weather array
-     */
-    public function getCityWeather()
-    {
-        $this->location = $_POST['city'];
         $lang = 'en';
         $units = 'metric';
 
-        $Weather = new OpenWeatherMap();
-        $currentWeather = $Weather->getWeather($this->location, $units, $lang);
+        if($weatherModel = WeatherSettings::find()->where(['not', ['city' => null] ])->one()){
+            $Weather = new OpenWeatherMap();
+            $currentWeather = $Weather->getWeather($weatherModel->city, $units, $lang);
 
-        $res = array(
-            'body'    => print_r($currentWeather, true),
-            'success' => true,
-        );
+            return $currentWeather;
+        }
 
-        var_dump(111); die;
-
+        return false;
     }
-
 }

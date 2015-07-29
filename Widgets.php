@@ -16,7 +16,18 @@ class Widgets extends \yii\base\Widget
 
     public function run()
     {
-        return $this->render('form', ['model' => new WeatherSettings]);
+        if(!$weatherModel = WeatherSettings::find()->where(['not', ['city' => null] ])->one()){
+            $weatherModel = new WeatherSettings();
+        }
+
+        $currentWeather = new Weather();
+        if($currentWeather = $currentWeather->defaultWeather()){
+            return $this->render('form_default', ['model' => $weatherModel, 'weather' => $currentWeather]);
+        }
+        else{
+            return $this->render('form', ['model' => $weatherModel]);
+        }
+
     }
 
 }
