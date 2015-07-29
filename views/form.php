@@ -29,8 +29,8 @@ $asset = drholera\Dhweather\assets\WeatherAssets::register($this);
 
     <div class="temp-city-wrapper">
 
-        <span class="temp-value"></span>
-        <span class="city-value"></span>
+        <span class="temp-value"><?= $weather->temperature->getFormatted(); ?></span>
+        <span class="city-value"><?= $weather->city->name; ?></span>
 
     </div>
 

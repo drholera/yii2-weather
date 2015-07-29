@@ -1,6 +1,6 @@
 <?php
 
-namespace drholera\dhweather;
+namespace drholera\Dhweather;
 
 use Cmfcmf\OpenWeatherMap;
 use drholera\Dhweather\model\WeatherSettings;
